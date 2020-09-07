@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    
+    tomcat:
+      max-active: 50
+      max-idle: 20
+      max-wait: 20000
+      min-idle: 15
+      
+    url: jdbc:mysql://localhost:3306/springbootdb
+    username: root
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+    
+  cache:
+    cache-names: ticketsCache 
+    #type: simple
+    
+    #caffeine:
+      #spec: maximumSize=500,expireAfterAccess=600s
+    #type: caffeine
+    
+    #infinispan:
+      #config: classpath:infinispan.xml
+    #type: infinispan
+    
+    ehcache:
+      config: classpath:ehcache.xml
+    type: ehcache
+    
+server:
+  port: 9090
+  
+management:
+  security:
+    enabled: false

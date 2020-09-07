@@ -1,0 +1,23 @@
+createTicket
+http://localhost:8080/api/admin/create
+
+{"passengerName":"Raj Kulkarni","bookingDate":1502649000000,"sourceStation":"Mumbai","destStation":"Chennai","email":"raj.k@gmail.com"}
+----------------------------------------------------------------------------------------------------------
+
+http://localhost:8080/api/tickets/ticketId/1
+
+----------------------------------------------------------------------------------------------------------
+
+getAllBookedTickets
+http://localhost:8080/api/tickets/alltickets
+
+----------------------------------------------------------------------------------------------------------
+
+deleteTicket
+http://localhost:8080/api/admin/ticketId/2
+
+----------------------------------------------------------------------------------------------------------
+updateTicket
+http://localhost:8080/api/admin/ticketId/{ticketId}/email/{newEmail:.+}
+
+
